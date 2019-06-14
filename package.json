@@ -1,0 +1,47 @@
+{
+  "name": "@mixmaxhq/travis-utils",
+  "version": "0.1.0",
+  "description": "Interact with the corresponding GitHub pull request from Travis.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "babel src -d dist",
+    "ci": "npm run lint",
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mixmaxhq/travis-utils.git"
+  },
+  "keywords": [
+    "build",
+    "diff",
+    "CI",
+    "continuous",
+    "integration",
+    "automated"
+  ],
+  "files": [
+    "dist"
+  ],
+  "author": "Eli Skeggs <eli@mixmax.com> (https://mixmax.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mixmaxhq/travis-utils/issues"
+  },
+  "homepage": "https://github.com/mixmaxhq/travis-utils#readme",
+  "dependencies": {
+    "@octokit/rest": "^16.28.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.4.4",
+    "eslint": "^5.16.0",
+    "eslint-config-mixmax": "^2.1.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2"
+  }
+}
